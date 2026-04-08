@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가챠홈 - 고객 지원</title>
+  <style>
+    :root {
+      --purple: #7F77DD;
+      --purple-light: #EEEDFE;
+      --purple-dark: #534AB7;
+      --bg: #f5f4f0;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --text2: #6b6b6b;
+      --border: rgba(0,0,0,0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--purple);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-icon svg { width: 28px; height: 28px; }
+
+    .app-info h1 { font-size: 20px; font-weight: 700; }
+    .app-info p { font-size: 13px; color: var(--text2); margin-top: 2px; }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--purple-dark);
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--purple);
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: opacity .15s;
+    }
+
+    .contact-btn:hover { opacity: 0.85; }
+
+    .contact-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item:first-child { padding-top: 0; }
+
+    .faq-q {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 12px;
+      color: var(--text2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-icon">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 4L4 10V22H10V16H18V22H24V10L14 4Z" fill="white" opacity="0.9"/>
+        <circle cx="14" cy="15" r="4" fill="white"/>
+        <circle cx="14" cy="15" r="2" fill="var(--purple)"/>
+        <circle cx="19" cy="6" r="2.5" fill="#EF9F27"/>
+      </svg>
+    </div>
+    <div class="app-info">
+      <h1>가챠홈</h1>
+      <p>고객 지원 센터</p>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2>📧 문의하기</h2>
+      <p style="font-size:14px; color:var(--text2); margin-bottom:16px; line-height:1.6;">
+        앱 사용 중 문제가 발생하거나 궁금한 점이 있으시면 이메일로 문의해주세요. 빠르게 답변드리겠습니다.
+      </p>
+      <a href="mailto:wetogetherweb@gmail.com" class="contact-btn">
+        <svg viewBox="0 0 20 20" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="16" height="12" rx="2"/>
+          <path d="M2 7l8 5 8-5"/>
+        </svg>
+        wetogetherweb@gmail.com
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>❓ 자주 묻는 질문</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q">데이터가 사라졌어요</div>
+          <div class="faq-a">앱의 데이터는 기기에 저장됩니다. 앱을 삭제하면 데이터도 함께 삭제되니 주의해주세요. 백업 기능을 이용해 데이터를 미리 내보내두시길 권장합니다.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">백업은 어떻게 하나요?</div>
+          <div class="faq-a">상단 메뉴(···) → 백업/복원을 통해 데이터를 JSON 파일로 내보내거나 가져올 수 있습니다.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">다크모드는 어떻게 설정하나요?</div>
+          <div class="faq-a">상단 메뉴(···) → 설정에서 라이트/다크 모드를 변경할 수 있습니다. 기기 시스템 설정을 따르도록 설정할 수도 있습니다.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">피규어 이미지를 추가할 수 있나요?</div>
+          <div class="faq-a">피규어 추가/수정 화면에서 이미지를 업로드하거나 시리즈 이미지에서 크롭할 수 있습니다.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">광고를 없앨 수 있나요?</div>
+          <div class="faq-a">현재 버전은 광고가 포함되어 있습니다. 추후 프리미엄 버전에서 광고 제거 기능을 제공할 예정입니다.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 GachaHome · wetogetherweb@gmail.com
+  </footer>
+
+</body>
+</html>
